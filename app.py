@@ -7,6 +7,10 @@ app = Flask(__name__)
 def get_home():
     return "Hello, world!"
 
+@app.route('/weather', methods=['GET'])
+def get_weather():
+    return "It's going to be a beautiful day!"
+
 if __name__ == '__main__':
     app.run(
       debug=True,
